@@ -3,7 +3,8 @@ ul {
   margin: 0;
   padding: 0px;
 }
-.todo-list {
+.todo-list,
+.todo-list__description {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -17,7 +18,7 @@ ul {
 .todo-list__description-image {
   width: 100%;
 }
-.todo-list__description .todo-list__link {
+.todo-list__link {
   font-family: fantasy, cursive;
 }
 
@@ -37,8 +38,9 @@ ul {
   display: inline-block;
   flex-grow: 1;
 }
-.todo-list__task-row-wrapper {
+.todo-list__add-task {
   display: flex;
+  flex-wrap: wrap;
 }
 .list-item, 
 .header-label {
@@ -92,6 +94,7 @@ ul {
 .todo-list__add-item-label {
   display: block;
   margin: 0 0 20px;
+  width: 100%;
 }
 .todo-list__task-value {
   width: 318px;
@@ -132,7 +135,7 @@ ul {
 }
 
 /* Completed */
-.todo-list__complete-tasks .todo-list__task.label {
+.todo-list__completed-tasks .todo-list__task.label {
   text-decoration: line-through;
   color: #888;
 }

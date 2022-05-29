@@ -124,7 +124,7 @@ var taskCompleted=function(){
 
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
-    listItem.className="todo-list__complete-task list-item";
+    listItem.className="todo-list__completed-task list-item";
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
