@@ -98,6 +98,7 @@ ul {
 }
 .todo-list__task-value {
   width: 318px;
+  flex-basis: 84%;
 }
 
 /* Task list */
