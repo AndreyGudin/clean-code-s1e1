@@ -124,7 +124,11 @@ var taskCompleted=function(){
 
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
-    listItem.className="todo-list__completed-task list-item";
+    if (listItem.classList.contains("edit-mode")){
+      listItem.className="todo-list__completed-task list-item edit-mode";
+    }else{
+      listItem.className="todo-list__completed-task list-item";
+    }
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
@@ -138,6 +142,11 @@ var taskIncomplete=function(){
     //Append the task list item to the #incompleteTasks.
     var listItem=this.parentNode;
     incompleteTaskHolder.appendChild(listItem);
+    if (listItem.classList.contains("edit-mode")){
+      listItem.className="todo-list__incomplete-task list-item edit-mode";
+    }else{
+      listItem.className="todo-list__incomplete-task list-item";
+    }
     bindTaskEvents(listItem,taskCompleted);
 }
 
